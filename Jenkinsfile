@@ -12,16 +12,17 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Compiling Java file...'
-                sh 'javac tictactoe.java'
+                bat 'javac tictactoe.java'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running Java program...'
-                sh 'java tictactoe < input.txt'
+                bat 'java tictactoe < input.txt'
             }
         }
     }
 }
+
 
