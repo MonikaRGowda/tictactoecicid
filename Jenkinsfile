@@ -10,11 +10,21 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                echo 'Compiling Java file...'
-                bat 'javac tictactoe.java'
-            }
-        }
+    steps {
+        echo 'Checking Java setup in Jenkins...'
+        bat 'where java'
+        bat 'where javac'
+        bat 'java -version'
+        bat 'javac -version'
+
+        echo 'Listing files in workspace...'
+        bat 'dir'
+
+        echo 'Compiling Java file...'
+        bat 'javac tictactoe.java'
+    }
+}
+
 
         stage('Test') {
             steps {
@@ -24,6 +34,7 @@ pipeline {
         }
     }
 }
+
 
 
 
