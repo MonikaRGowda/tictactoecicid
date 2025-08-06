@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Cloning source code from GitHub...'
-                git 'https://github.com/MonikaRGowda/tictactoejava.git'
+                git 'https://github.com/MonikaRGowda/tictactoecicid.git'
             }
         }
 
@@ -24,3 +24,4 @@ pipeline {
         }
     }
 }
+
