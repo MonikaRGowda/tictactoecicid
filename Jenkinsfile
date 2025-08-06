@@ -1,11 +1,11 @@
 pipeline {
     agent any
 
-    stages {
+     stages {
         stage('Checkout') {
             steps {
                 echo 'Cloning source code from GitHub...'
-                git 'https://github.com/MonikaRGowda/tictactoecicid.git'
+                git branch: 'main', url: 'https://github.com/MonikaRGowda/tictactoecicid.git'
             }
         }
 
@@ -24,5 +24,6 @@ pipeline {
         }
     }
 }
+
 
 
